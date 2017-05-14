@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+    <h2>Valor sin escapar</h2>
+    <%= valor %>
+
+    <h2> Incluir condición </h2>
+    <h3> <%= condicion %> </h2>
+    <% if (condicion.estado) { %>
+      <p><%= condicion.segundo %> es par</p>
+    <% } else { %>
+        <p><%= condicion.segundo %> es impar</p>    
+    <% } %>
+
+    <!-- Iterando con for un array -->
+    <% users.forEach(user => { %>
+      <p> <%= user.name + ' ' + user.age %> </p>
+    <%}) %>
+    
+  </body>
+</html>
